@@ -1,0 +1,297 @@
+/*** Global ***/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap'); /* Titles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap'); /* Texts */
+
+*    {box-sizing: border-box; margin: 0; padding: 0; border: 0; outline: 0;}
+html {scroll-behavior: smooth; zoom: 0.95;}
+body {font-family: 'Montserrat', sans-serif; color: #fff; line-height: 1.5;}
+h1   {font-family: 'Roboto Slab', serif;}
+
+ul {list-style: none;}
+a  {text-decoration: none;}
+
+/*** Colors ***/
+:root
+{
+  --color-dark-blue: #153358;
+  --color-blue: #255da1;
+  --color-light-blue: #bddbff;
+}
+
+/*** Custom Scrollbar ***/
+::-webkit-scrollbar {width: 0;}
+
+/*** Background ***/
+header::before
+{
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: url('../img/background.jpg') no-repeat center center /cover;
+}
+
+/***********************************************************************************************************************************************/
+/*** Navigation Menu ***/
+/* Navbar Layout */
+.top {opacity: 0;}
+.navbar
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  visibility: hidden;
+  z-index: 2;
+
+  padding: 16px 32px;
+  width: 100%;
+  top: 0px;
+
+  transition: all 0.2s ease-in-out 0.5s;
+  -moz-transition: all 0.2s ease-in-out 0.5s;
+  -webkit-transition: all 0.2s ease-in-out 0.5s;
+  -o-transition: all 0.2s ease-in-out 0.5s;
+}
+
+/* Navbar Links */
+.navbar ul {display: flex;}
+
+.navbar a:hover {color: var(--color-light-blue);}
+.navbar a
+{
+  margin-inline: 12px;
+  padding: 4px;
+
+  color: #fff;
+
+  transition: color 0.1s ease-in-out;
+  -moz-transition: color 0.1s ease-in-out;
+  -webkit-transition: color 0.1s ease-in-out;
+  -ms-transition: color 0.1s ease-in-out;
+}
+
+/* Navbar Logo */
+.navbar .logo
+{
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* Header */
+.header-content > * {z-index: 1;}
+.header-content
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  height: 100vh;
+
+  color: #fff;
+}
+
+.header-title
+{
+  font-size: 5rem;
+  letter-spacing: 8px;
+}
+
+.header-text
+{
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+
+/***********************************************************************************************************************************************/
+/*** Main Content ***/
+/* Layout */
+.planet-section > *{z-index: 1;}
+.planet-section
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  height: 100vh;
+  margin-bottom: 540px;
+}
+
+.section-part1
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  max-width: 97%;
+}
+
+.section-part2
+{
+  display: flex;
+  justify-content: center;
+
+  max-width: 97%;
+  margin-top: 32px;
+}
+
+/* Content */
+.planet-img
+{
+  width: 560px;
+  margin-right: 32px;
+}
+
+.planet-content
+{
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+  width: 720px;
+}
+
+.planet-content .content-title
+{
+  font-size: 5rem;
+  letter-spacing: 12px;
+}
+
+.planet-content .content-text
+{
+  text-align: justify;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.planet-content .source:hover {border-bottom: var(--color-light-blue) solid 1px;}
+.planet-content .source
+{
+  color: var(--color-light-blue);
+  text-decoration: none;
+
+  padding: 0px 0px 2px 4px;
+}
+
+.planet-content li span  {color: var(--color-light-blue);}
+.planet-content li:hover {box-shadow: inset 690px 0 0 0.09px #15335891;}
+.planet-content li
+{
+  padding: 12px 24px;
+  margin-block: 12px;
+  font-size: 1.3rem;
+
+  background-color: #2a60a121;
+  box-shadow: inset 0 0 0 0.09px #1533589f;
+  border: var(--color-blue) 1px solid;
+  border-radius: 2px;
+
+  transition: all 0.35s ease-out 0.2s;
+  -moz-transition: all 0.35s ease-in-out 0.2s;
+  -webkit-transition: all 0.35s ease-in-out 0.2s;
+  -ms-transition: all 0.35s ease-in-out 0.2s;
+}
+
+.btn-array {text-align: right;}
+
+/***********************************************************************/
+
+.planet-item:hover {box-shadow: inset 0 250px 0 00.9px #15335891;}
+.planet-item
+{
+  display: flex;
+  flex-direction: column;
+
+  width: 308px;
+  margin: 8px;
+  padding: 16px;
+
+  box-shadow: inset 0 0 0 0.09px #1533589f;
+  background-color: #2a60a121;
+  border: var(--color-blue) 1px solid;
+  border-radius: 2px;
+
+  transition: all 0.35s ease-out 0.1s;
+}
+
+.planet-item h2
+{
+  font-size: 0.9rem;
+  color: #a8a8a8;
+}
+
+.planet-item p
+{
+  margin-block: auto;
+  font-size: 1.7rem;
+}
+
+/***********************************************************************************************************************************************/
+/*** Buttons ***/
+.btn
+{
+  display: inline-block;
+  margin-left: 8px;
+  padding: 8px 16px;
+
+  font-size: 1.3rem;
+  border-radius: 2px;
+
+  transition: all 0.2s ease-in-out 0.01s;
+  -moz-transition: all 0.2s ease-in-out 0.01s;
+  -webkit-transition: all 0.2s ease-in-out 0.01s;
+  -ms-transition: all 0.2s ease-in-out 0.01s;
+}
+
+.btn i {font-size: 1.1rem;}
+
+.btn-white:hover {box-shadow: var(--color-blue) 4px 4px;}
+.btn-white
+{
+  color: var(--color-dark-blue);
+  background-color: #fff;
+}
+
+.btn-blue:hover {box-shadow: #fff 4px 4px;}
+.btn-blue
+{
+  color: #fff;
+  background-color: var(--color-blue);
+}
+
+#sun-btn:hover     {color: #ffb246;}
+#mercury-btn:hover {color: #f0cdb9;}
+#venus-btn:hover   {color: #d47c49;}
+#earth-btn:hover   {color: #67d14f;}
+#mars-btn:hover    {color: #df373c;}
+#jupiter-btn:hover {color: #f58720;}
+#saturn-btn:hover  {color: #ffcd43;}
+#uranus-btn:hover  {color: #489cc3;}
+#neptune-btn:hover {color: #347ad4;}
+/***********************************************************************************************************************************************/
+
+/*** Animations ***/
+/* Header */
+.header-content > * {opacity: 0; animation: header-opacity 0.5s forwards ease-in-out 1s;}
+@keyframes header-opacity {from {opacity: 0;} to {opacity: 1;}}
+
+/* Main Content */
+.invisible {opacity: 0;}
+.planet-anim {animation: planet-move-up 0.8s forwards cubic-bezier(.75, .01, .37, .94) 0.2s;}
+
+@keyframes planet-move-up
+{from {opacity: 0; transform: translateY(96px);} to {opacity: 1; transform: translateY(0px);}}
+
+.item-0 {animation-delay: 0.5s;} .item-1 {animation-delay: 0.55s;} .item-2 {animation-delay: 0.6s;} .item-3 {animation-delay: 0.65s;}
+.item-4 {animation-delay: 0.7s;} .item-5 {animation-delay: 0.75s;} .item-6 {animation-delay: 0.8s;} .item-7 {animation-delay: 0.85s;}
+.item-8 {animation-delay: 1.3s;} .item-9 {animation-delay: 1.35s;} .item-10 {animation-delay: 1.4s;} .item-11 {animation-delay: 1.45s;}

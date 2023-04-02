@@ -1,0 +1,84 @@
+/*** Desktop ***/
+/* Global */
+@media screen and (min-width: 1024px)
+{
+  html {scroll-snap-type: y mandatory; overflow-y: scroll;}
+
+  .planet-section,
+  .header-content
+  {scroll-snap-align: start;}
+
+  .navbar {visibility: visible;}
+}
+
+/* 4K */
+@media screen and (min-width: 3840px)
+{
+  html {zoom: 2;}
+
+  header,
+  .header-content,
+  .planet-section
+  {height: 50vh;}
+}
+
+/* 1440p */
+@media screen and (min-width: 2560px) and (max-width: 3839px)
+{
+  html {zoom: 1.35;}
+
+  header,
+  .header-content,
+  .planet-section
+  {height: 75vh;}
+}
+
+/**********************************************************************************************************************/
+
+/*** Mobile ***/
+/* Global */
+@media screen and (max-width: 1023px) {.planet-img {margin-right: 0px;}}
+
+/* Tablets */
+@media screen and (max-width: 768px)
+{
+  .planet-section,
+  .section-part1,
+  .section-part2
+  {flex-direction: column; width: 100%;}
+
+  .planet-section {margin-top: 1000px;}
+
+  .section-part2 {align-items: center;}
+
+  .planet-content {max-width: 93%;}
+
+  .planet-item {width: 88%; margin: 8px 0; text-align: center;}
+
+  main .btn {display: none;}
+}
+
+/*21:9 Smartphones & Surface Duo*/
+@media screen and (max-width: 540px)
+{
+  .planet-content .content-title {font-size: 3.5rem; letter-spacing: 8px;}
+
+  .planet-content .content-text {letter-spacing: 1px;}
+
+  .btn {margin-top: 8px;}
+}
+
+/* 16:9 Smartphones */
+@media screen and (max-width: 360px)
+{
+  .planet-section {margin-bottom: 1350px;}
+
+  .planet-img {width: 370px;}
+
+  .header-title {font-size: 3.5rem ; letter-spacing: 4px;}
+}
+
+/* Planet Image */
+@media screen and (min-width: 541px) and (max-width: 768px) {.planet-img {width: 500px;}}
+@media screen and (min-width: 360px) and (max-width: 540px) {.planet-img {width: 370px;}}
+
